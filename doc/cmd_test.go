@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/spf13/cobra"
+	"github.com/landonb/cobra"
 )
 
 var flagb1, flagb2, flagb3, flagbr, flagbp bool

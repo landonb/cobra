@@ -19,8 +19,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
+	"github.com/landonb/cobra"
+	"github.com/landonb/viper"
 )
 
 func init() {
@@ -158,8 +158,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/spf13/cobra"
-{{ if .viper }}	"github.com/spf13/viper"
+	"github.com/landonb/cobra"
+{{ if .viper }}	"github.com/landonb/viper"
 {{ end }})
 {{if .viper}}
 var cfgFile string

@@ -6,8 +6,8 @@ Generating man pages from a cobra command is incredibly easy. An example is as f
 package main
 
 import (
-	"github.com/spf13/cobra"
-	"github.com/spf13/cobra/doc"
+	"github.com/landonb/cobra"
+	"github.com/landonb/cobra/doc"
 )
 
 func main() {
@@ -35,7 +35,7 @@ import (
 	"k8s.io/kubernetes/pkg/kubectl/cmd"
 	cmdutil "k8s.io/kubernetes/pkg/kubectl/cmd/util"
 
-	"github.com/spf13/cobra/doc"
+	"github.com/landonb/cobra/doc"
 )
 
 func main() {

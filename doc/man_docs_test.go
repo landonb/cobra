@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/spf13/cobra"
+	"github.com/landonb/cobra"
 )
 
 var _ = fmt.Println
