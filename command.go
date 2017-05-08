@@ -44,6 +44,8 @@ type Command struct {
 	Short string
 	// The long message shown in the 'help <this-command>' output.
 	Long string
+	// [lb] Positional arguments.
+	Positional []string
 	// Examples of how to use the command
 	Example string
 	// List of all valid non-flag arguments that are accepted in bash completions
@@ -337,7 +339,7 @@ func (c *Command) UsageTemplate() string {
 		return c.parent.UsageTemplate()
 	}
 	return `Usage:{{if .Runnable}}
-  {{if .HasAvailableFlags}}{{appendIfNotPresent .UseLine "[flags]"}}{{else}}{{.UseLine}}{{end}}{{end}}{{if .HasAvailableSubCommands}}
+  {{if .HasAvailableFlags}}{{appendIfNotPresent .UseLine "[flags]"}}{{range .Positional}} {{.}}{{end}}{{else}}{{.UseLine}}{{end}}{{end}}{{if .HasAvailableSubCommands}}
   {{ .CommandPath}} [command]{{end}}{{if gt .Aliases 0}}
 
 Aliases:
